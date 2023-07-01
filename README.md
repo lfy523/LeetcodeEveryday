@@ -1,2 +1,6 @@
-# LeetcodeEveryday
-For gitbook of record of leetcode
+---
+description: 写在最前面
+---
+
+# 序
+
