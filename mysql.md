@@ -46,5 +46,39 @@ USE 表名
 ```sql
 Age tinyint unsigned
 Score double(4,1) #整体长度4,小数长度1
+#一般不直接存二进制
+char(10) #定长，性能高
+varchar(10) #变长，性能低
+Username varchar
+age char(1)
+
 
 ```
+
+表操作＿修改
+
+```sql
+ALTER TABLE 表名 ADD 字段名 类型（长度）［COMMENT 注释］［约束］
+ALTER TABLE 表名 MODIFY 字段名 新类型 #只能改数据类型
+ALTER TABLE 表名 CHANGE 旧名 新名 新类型
+```
+
+删除
+
+```sql
+ALTER TABLE 表名 DROP 字段名
+```
+
+修改表名
+
+```sql
+ALTER TABLE 表名 RENAME TO 新表名
+```
+
+删除表
+
+```sql
+DROP TABLES IF EXISTS 表名
+TRUNCATE TABLE 表名#删除并新建，但数据会消失
+```
+
