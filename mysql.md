@@ -40,7 +40,7 @@ varchar  字符串
 
 ```sql
 CREATE DATABASE 数据库名
-USE 表名
+USE 数据库名
 ```
 
 ```sql
@@ -85,3 +85,31 @@ TRUNCATE TABLE 表名#删除并新建，但数据会消失
 MySQL 图形化
 
 Datagrip
+
+
+
+DML:对表中数据进行增删改
+
+```sql
+添加(INSERT)
+修改(UPDATE)
+删除(DELETE)
+```
+
+```sql
+INSERT INTO 表名 （字段名1,字段名2) VALUES (值1, 值2)#指定字段
+INSERT INTO 表名 VALUES (值1,值2) #给全部字段
+INSERT INTO 表名 （字段名1, 字段名2) VALUES (值1, 值2),(值1, 值2),...
+INSERT INTO 表名 VALUES (值1, 值2),(值1, 值2),... #批量添加
+```
+
+注意事项:日期，字符串应包含在引号内
+
+```sql
+UPDATE 表名 SET 字段名1=值1, 字段名2 =值2, …[WHERE 条件]; 
+UPDATE emp SET name = 小昭, gender =女 where Id= 1;
+```
+
+```sql
+DELETE FROM 表名 [WHERE 条件]
+```
