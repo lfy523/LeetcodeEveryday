@@ -39,7 +39,7 @@ DDL
 varchar  字符串
 
 ```sql
-CREATE DATABASE 表名
+CREATE DATABASE 数据库名
 USE 表名
 ```
 
@@ -82,3 +82,6 @@ DROP TABLES IF EXISTS 表名
 TRUNCATE TABLE 表名#删除并新建，但数据会消失
 ```
 
+MySQL 图形化
+
+Datagrip
