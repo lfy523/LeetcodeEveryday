@@ -113,3 +113,67 @@ UPDATE emp SET name = 小昭, gender =女 where Id= 1;
 ```sql
 DELETE FROM 表名 [WHERE 条件]
 ```
+
+DQL:关键字SELECT
+
+```sql
+SELECT 字段列表
+FROM 表名列表
+WHERE 条件列表
+GROUP BY 分组字段列表
+HAVING 分组后条件列表
+ORDER BY 排序字段列表
+LIMIT 分页参数
+```
+
+查询多个字段
+
+```sql
+SELECT 字段1, 字段2,… FROM 表名;
+SELECT FROM 表名;
+```
+
+设置别名
+
+```sql
+SELECT 字段1[AS 别名1],…FROM 表名;
+```
+
+去除重复记录
+
+```sql
+SELECT DISTINCT 字段列表 FROM 表名;
+```
+
+尽量不写\* （影响效率）
+
+条件查询
+
+```sql
+SELECT 字段列表 FROM 表名 WHERE 条件列表
+//BETWEEN … AND
+//IS NULL
+//in()满足其一即可
+// where name like ‘__’ 两个字的
+// ‘%X’
+```
+
+聚合函数
+
+```sql
+count max min avg sum
+SELECT 聚合函数（字段列表） FROM 表名;//不计算NULL值
+```
+
+分组查询
+
+```sql
+SELECT 字段列表 FROM 表名 [WHERE 条件] GROUP BY 分组字段名 [HAVING 分组后条件]
+//WHERE: 分组之前 HAVING 分组之后
+// WHERE 不能对聚合函数进行判断, HAVING 可以
+SELECT gender, count(*) FROM emp GROUP BY gender;
+```
+
+执行顺序: where > 聚合函数> having
+
+分组后查询字段一般为聚合函数及字段
